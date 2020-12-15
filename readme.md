@@ -8,3 +8,5 @@ git remote add origin https://github.com/Akssasori/TCC.git
 git push -u origin main
 
 Use npm i para baixar as depedencias 
+
+Depois para iniciar use npm start
