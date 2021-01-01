@@ -1,8 +1,9 @@
+const { vacinas } = require("../models");
 const db = require("../models");
 const Vacina = db.vacinas;
 
 exports.create = (req, res) => {
-    if(!req.body.title){
+    if(!req.body.nomePaciente){
         res.status(400).send({message: "não pode ser vazio!"});
         return;
     }
@@ -18,7 +19,7 @@ exports.create = (req, res) => {
     });
 
     vacina
-        .save(tutorial)
+        .save(vacina)
         .then(data => {
             res.send(data);
         })
